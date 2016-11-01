@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.yellowsoft.lawyers" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.yellowsoft.shalay.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:supportsRtl="true"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".SignupLawyersActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <data android:scheme="my.special.scheme" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LanguageActvity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".LawyersActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".LawyerDetailsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".TimelineActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".PackagesActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".PaymentActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".ImageEditActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".MapDisplayActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme">
+        </activity>
+        <activity
+            android:name=".ChatingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".BooksActivity"
+            android:label="@string/app_name"
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDDQBWyfsOJyiVY03APNXG-x1yeDj_D2IY" />
+    </application>
+
+</manifest>

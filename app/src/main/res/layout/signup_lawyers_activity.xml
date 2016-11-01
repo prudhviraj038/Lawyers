@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pink_background">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/menu_back"
+                android:padding="5dp"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/bvfklt"
+                    android:src="@drawable/back"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="New Text"
+                    android:id="@+id/textView15"
+                    android:layout_weight="1"
+                    android:src="@drawable/page_logo" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollView5" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="30dp" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginBottom="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="140dp"
+                            android:layout_height="140dp">
+
+                            <view
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                class="de.hdodenhof.circleimageview.CircleImageView"
+                                android:id="@+id/lawyer_image"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/timeline_photo" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView44"
+                                android:src="@drawable/lawyer_page_circle"
+                                android:layout_centerInParent="true" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:showDividers="middle"
+                        android:divider="@drawable/register_divider" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners" >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/imageView45"
+                                    android:src="@drawable/email"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical" >
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/law_signup_fname"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:hint="First Name"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners" >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/imageView46"
+                                    android:src="@drawable/email"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical" >
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/law_signup_lname"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:hint="Last Name"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners" >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/imageView48"
+                                    android:src="@drawable/email"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical" >
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/law_signup_uname"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:hint="User Name"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners" >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/imageView50"
+                                    android:src="@drawable/email"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical" >
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="textEmailAddress"
+                                        android:id="@+id/law_signup_email"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true"
+                                        android:text="E-mail Address" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners" >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/imageView49"
+                                    android:src="@drawable/email"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical" >
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/law_signup_pass"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:hint="Password"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true"
+                                        android:inputType="textPassword" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners" >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/imageView51"
+                                    android:src="@drawable/email"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical" >
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/law_signup_phone"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:hint="Phone Number"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true"
+                                        android:inputType="phone" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners"
+                                android:id="@+id/calender_ll"
+                                android:focusableInTouchMode="false">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/law_signup_licenced"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:hint="LIcenced Since"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent" />
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/imageView43"
+                                    android:src="@drawable/calender" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners" >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/imageView54"
+                                    android:src="@drawable/email"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical" >
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/law_signup_location"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:hint="Location"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners"
+                                android:id="@+id/signup_pr_area_ll">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/signup_pr_area_tv"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true"
+                                        android:text="Practiced Areas" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent" />
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/imageView52"
+                                    android:src="@drawable/down_arrow_full" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners"
+                                android:id="@+id/law_banner_ll" >
+
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/law_banner_img"
+                                    android:src="@drawable/lawyer_back"
+                                    android:scaleType="centerCrop" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_weight="1" >
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/law_banner_tv"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true"
+                                        android:text="BAnner Image"
+                                        android:gravity="center" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners" >
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/imageView53"
+                                    android:src="@drawable/email"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical" >
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/law_signup_about"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:hint="About"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="false"
+                                        android:minLines="3"
+                                        android:gravity="top" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/login_rounded_corners"
+                        android:id="@+id/law_register_ll"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:layout_marginTop="40dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Register"
+                            android:id="@+id/law_register_tv"
+                            android:textColor="#ffffff"
+                            android:textSize="18sp"
+                            android:layout_margin="10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#88000000"
+            android:id="@+id/areas_pop"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@drawable/pink_rounded_corners1"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/half_rounded_corners2">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/imageView34"
+                        android:src="@drawable/close"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/areas_title"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Choose Practiced Areas" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/law_sign_pop_close"
+                        android:src="@drawable/close_white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/area_listview" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

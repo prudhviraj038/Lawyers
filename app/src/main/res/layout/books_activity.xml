@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_background">
+
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewFlipper3" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/menu_back"
+                android:gravity="center_vertical"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/books_back"
+                    android:src="@drawable/back" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:id="@+id/imageView56"
+                    android:src="@drawable/page_logo"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/imageView57"
+                    android:src="@drawable/filter"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="50dp">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/books_list"
+                        android:padding="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:gravity="bottom" >
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/down_bar_dimension"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:background="#c69a32" >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="80dp"
+                                android:layout_height="70dp"
+                                android:layout_centerInParent="true" />
+
+                            <ImageView
+                                android:layout_width="@dimen/img_dimension"
+                                android:layout_height="@dimen/img_dimension"
+                                android:id="@+id/load_img_3"
+                                android:src="@drawable/g_loader"
+                                android:layout_centerInParent="true" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/down_bar_dimension"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:background="#c69a32" >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                android:background="#c69a32" />
+
+                            <ImageView
+                                android:layout_width="@dimen/img_dimension"
+                                android:layout_height="@dimen/img_dimension"
+                                android:id="@+id/lawyers_img_3"
+                                android:src="@drawable/g_user"
+                                android:layout_centerInParent="true" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/down_bar_dimension"
+                                android:background="#c69a32"
+                                android:layout_marginTop="20dp" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="@dimen/down_bar_dimension"
+                                android:layout_height="@dimen/down_bar_dimension"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/circle_rounded_corners" />
+
+                            <ImageView
+                                android:layout_width="@dimen/img_dimension"
+                                android:layout_height="@dimen/img_dimension"
+                                android:id="@+id/books_image_3"
+                                android:src="@drawable/w_books"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/down_bar_dimension"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:background="#c69a32" >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                android:background="#c69a32" />
+
+                            <ImageView
+                                android:layout_width="@dimen/img_dimension"
+                                android:layout_height="@dimen/img_dimension"
+                                android:id="@+id/settings_img_3"
+                                android:src="@drawable/g_settings"
+                                android:layout_centerInParent="true" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/menu_back"
+                android:gravity="center_vertical"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/books_back1"
+                    android:src="@drawable/back" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:id="@+id/imageView58"
+                    android:src="@drawable/page_logo"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/imageView59"
+                    android:src="@drawable/filter"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/books_webView" />
+        </LinearLayout>
+
+    </ViewFlipper>
+
+</LinearLayout>

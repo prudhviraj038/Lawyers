@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/libs/volley.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/AppController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/AreasListAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/BooksAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/ChatingAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/ImageEditActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/LanguageActvity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/LawyersAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/LruBitmapCache.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/PackagesAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/PaymentActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/PracticeAreasAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/ReviewsAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/Settings.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/SplashActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/in/yellowsoft/lawyers/TimelineAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-ar/rotate_left.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-ar/rotate_right.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ar_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/black_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/circle_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/half_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/half_rounded_corners2.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/half_white_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/home_rounded_corners1.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/lng_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/login_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/pink_rounded_corners1.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/readmore_lawyer_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/register_divider.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/review_divider.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/rotate_left.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/rotate_right.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/settings_divider.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/signup_lawyer_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/signup_user_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/white_rounded_corners.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/image_edit_view.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/language_screen.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/payment_screen.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml" charset="UTF-8" />
+  </component>
+</project>

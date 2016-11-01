@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <view
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            class="de.hdodenhof.circleimageview.CircleImageView"
+            android:src="@drawable/timeline_photo"
+            android:id="@+id/rev_img" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hani El Azem"
+                    android:id="@+id/rev_name"
+                    android:textColor="#000"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/review_rating_ll"></LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Months Ago"
+                android:id="@+id/rev_date"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Great law firm, exceptional service and they really take care of their clients."
+                android:id="@+id/rev_description"
+                android:textSize="12sp"
+                android:textColor="#000" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

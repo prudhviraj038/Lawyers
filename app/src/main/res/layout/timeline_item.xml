@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_rounded_corners"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visa for Priority Workers"
+                    android:id="@+id/tim_lin_header"
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/time_line_share"
+                android:src="@drawable/upload_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Figuring out what type of work visa you need can be a difficult task. There are a number of work visas that are available to foreign citizens who wish to work in the United States. The visa that an individual may be eligible for depends on the nature of the work that is to be conducted."
+                android:id="@+id/time_line_des"
+                android:textColor="#000"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/time_line_img"
+                    android:src="@drawable/timeline_photo"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="4dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView25"
+                    android:src="@drawable/home_rounded_corners1"
+                    android:scaleType="centerCrop" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="08:23 AM"
+                    android:id="@+id/time_line_time"
+                    android:textColor="#828282"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03/12/2015"
+                    android:id="@+id/time_line_date"
+                    android:textColor="#828282"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/read_more_ll"
+                    android:background="@drawable/readmore_lawyer_rounded_corners">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Read More"
+                        android:id="@+id/read_more"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

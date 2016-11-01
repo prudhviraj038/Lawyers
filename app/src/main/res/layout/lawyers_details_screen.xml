@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/pink_background">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollView4"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/menu_back"
+                        android:gravity="center_vertical"
+                        android:padding="5dp" >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:id="@+id/law_det_back"
+                            android:src="@drawable/back" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:id="@+id/imageView35"
+                            android:src="@drawable/page_logo"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:id="@+id/law_status"
+                            android:src="@drawable/red_icon" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:gravity="center"
+                        android:background="#6d5739">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bg_img"
+                                android:src="@drawable/lawyer_back"
+                                android:adjustViewBounds="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingTop="5dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="New Text"
+                                    android:id="@+id/lawyer_name_deta"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="25dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:id="@+id/law_rating_ll"
+                                    android:gravity="center"></LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="12dp"
+                                    android:background="@color/pink_background"></LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="false"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentBottom="true">
+
+                            <RelativeLayout
+                                android:orientation="vertical"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/imageView38"
+                                    android:src="@drawable/lawyer_page_circle"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true" />
+
+                                <view
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    class="de.hdodenhof.circleimageview.CircleImageView"
+                                    android:id="@+id/lawyer_image"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:src="@drawable/timeline_photo"
+                                    android:layout_margin="5dp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_rounded_corners">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/half_rounded_corners"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="ABOUT COMPANY"
+                                        android:id="@+id/about_company"
+                                        android:textColor="#ffffff"
+                                        android:textSize="12sp"
+                                        android:layout_margin="10dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Over the years we have advised, and continue to support, government, government-owned entities, local, regional and international companies, banks and financial institutions along with both international and regional law firms.  Our core strength is our people and the diversity of their experience and local knowledge. Our reputation for excellence and regional experience extends beyond our network of offices in Bahrain, Egypt, Iraq, Jordan, Kuwait, Qatar, Oman, Saudi Arabia and the United Arab Emirates.  As a firm, our ability to practice local law in each of these jurisdictions – and the ability of each of our licensed litigators to have rights of audience before local courts – is a unique strength that truly sets us apart from our competitors.  But more importantly, our strength comes from our clients’ trust that we will give them the quality of service that they deserve."
+                                    android:id="@+id/about_company_description"
+                                    android:textSize="12sp"
+                                    android:textColor="#000" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_rounded_corners"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/half_rounded_corners"
+                                    android:gravity="center" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="PRACTICE AREAS"
+                                        android:id="@+id/practice_area"
+                                        android:textColor="#ffffff"
+                                        android:textSize="12sp"
+                                        android:layout_margin="10dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp" >
+
+                                <GridView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/p_area_grid"
+                                    android:numColumns="2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_rounded_corners">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/half_rounded_corners"
+                                    android:gravity="center" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="REVIEWS"
+                                        android:id="@+id/reviews_tv"
+                                        android:textColor="#ffffff"
+                                        android:textSize="12sp"
+                                        android:layout_marginLeft="25dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginRight="25dp"
+                                        android:layout_marginBottom="10dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical|end">
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:id="@+id/add_review_ll">
+
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:id="@+id/imageView39"
+                                            android:src="@drawable/add_reviews"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginRight="5dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="ADD YOUR REVIEWS"
+                                            android:id="@+id/add_review_tv"
+                                            android:textColor="#75634b"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp" >
+
+                                <ListView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/reviews_list" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#c69a32"
+                android:divider="@drawable/review_divider"
+                android:showDividers="middle"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/calling_ll">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/calling_img"
+                        android:src="@drawable/phone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/mes_ll">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/mail_img"
+                        android:src="@drawable/mail" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/map_ll">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/map_img"
+                        android:src="@drawable/location" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/l_det_share_ll">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/share_img"
+                        android:src="@drawable/upload" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/giv_rev_popup"
+            android:background="#88000000"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pink_rounded_corners1"
+                android:padding="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/imageView42"
+                        android:src="@drawable/close"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/giv_rev_title"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Give Your review" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/giv_rev_close"
+                        android:src="@drawable/close" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rating"
+                            android:id="@+id/giv_rev_sta_rating"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/giv_rat_ll"></LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Review"
+                            android:id="@+id/giv_rev_sta_review"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="@drawable/white_rounded_corners" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/giv_rev_et"
+                                        android:background="#00000000"
+                                        android:textColor="@color/text_black"
+                                        android:hint="Enter Email id"
+                                        android:textColorHint="@color/text_black"
+                                        android:textSize="14sp"
+                                        android:singleLine="false"
+                                        android:minLines="5"
+                                        android:gravity="top" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/line_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/login_rounded_corners"
+                            android:id="@+id/giv_rev_submit_ll" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SUBMIT"
+                                android:id="@+id/giv_rev_submit_tv"
+                                android:textSize="15sp"
+                                android:textColor="#ffffff"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_marginBottom="7dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
