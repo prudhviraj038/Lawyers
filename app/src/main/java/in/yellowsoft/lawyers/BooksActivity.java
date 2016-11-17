@@ -43,6 +43,7 @@ public class BooksActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Settings.forceRTLIfSupported(this);
         setContentView(R.layout.books_activity);
         books=new ArrayList<>();
         get_books();
@@ -99,9 +100,15 @@ public class BooksActivity extends Activity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), SettingsActivity.class);
-                startActivity(mainIntent);
-                finish();
+                if(Settings.getUserid(BooksActivity.this).equals("-1")){
+                    Intent mainIntent = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(mainIntent);
+                    finish();
+                }else {
+                    Intent mainIntent = new Intent(getApplicationContext(), SettingsActivity.class);
+                    startActivity(mainIntent);
+                    finish();
+                }
             }
         });
     }
@@ -146,7 +153,7 @@ public class BooksActivity extends Activity {
 //                    + "lawyer_id="+Settings.getUserid(this);
         Log.e("url--->", url);
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Please wait....");
+        progressDialog.setMessage(Settings.getword(this,"please_wait"));
         progressDialog.setCancelable(false);
         JsonArrayRequest jsObjRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
@@ -174,7 +181,7 @@ public class BooksActivity extends Activity {
             public void onErrorResponse(VolleyError error) {
                 // TODO Auto-generated method stub
                 Log.e("response is:", error.toString());
-                Toast.makeText(BooksActivity.this, "Server not connected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(BooksActivity.this, Settings.getword(BooksActivity.this,"server_not_connected"), Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
             }
 

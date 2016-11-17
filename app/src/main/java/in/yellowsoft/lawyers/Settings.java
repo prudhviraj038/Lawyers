@@ -25,22 +25,36 @@ public class Settings {
     public static final String login_url = SERVERURL+"login.php?";
     public static final String law_Verify_url = SERVERURL+"verify-lawyer.php?";
     public static final String law_signup_url = SERVERURL+"add-lawyer.php?";
+    public static final String law_edit_profile_url = SERVERURL+"edit-lawyer.php?";
     public static final String law_Add_image_url = SERVERURL+"add-lawyer-image.php?";
     public static final String law_Add_Banner_image_url = SERVERURL+"add-lawyer-banner-image.php?";
     public static final String signup_url = SERVERURL+"add-member.php?";
+    public static final String User_Add_image_url = SERVERURL+"add-member-image.php?";
     public static final String Packages_url = SERVERURL+"packages.php";
     public static final String Lawyers_url = SERVERURL+"lawyers-list.php";
-    public static final String Posts_url = SERVERURL+"posts.php?";
+    public static final String Posts_url = SERVERURL+"posts.php";
     public static final String edit_profile_url = SERVERURL+"edit-member.php";
     public static final String change_password_url = SERVERURL+"change-password.php?";
     public static final String forgot_password_url = SERVERURL+"forget-password.php?";
     public static final String Lawyer_status_url = SERVERURL+"member-status.php?";
+    public static final String Add_Lawyer_status_url = SERVERURL+"add-member-status.php?";
     public static final String Add_rating_url = SERVERURL+"add-rating.php?";
     public static final String MemberDetails_url = SERVERURL+"members.php?";
     public static final String Areas_url = SERVERURL+"areas.php";
     public static final String Post_comm_url = SERVERURL+"add-post.php?";
     public static final String Post_img_url = SERVERURL+"add-post-image.php?";
     public static final String Books_url = SERVERURL+"books.php?";
+    public static final String Upload_video_url = SERVERURL+"add-post-video.php";
+    public static final String like_url = SERVERURL+"like.php?";
+    public static final String Unlike_url = SERVERURL+"unlike.php?";
+    public static final String like_status_url = SERVERURL+"like-status.php?";
+    public static final String follow_url = SERVERURL+"lawyer-follow.php?";
+    public static final String Unfollow_url = SERVERURL+"lawyer-unfollow.php?";
+    public static final String follow_status_url = SERVERURL+"follow-status.php?";
+    public static final String Add_chat_url = SERVERURL+"add-chat.php?";
+    public static final String Chat_list_url = SERVERURL+"chats.php?";
+    public static final String Chat_members_list_url = SERVERURL+"member-chats.php?";
+    public static final String Member_info_url = SERVERURL+"info.php?";
     public  static final long DURATION=300;
     static String Area_id="area_id";
     static String Area_name="area_name";
@@ -48,12 +62,22 @@ public class Settings {
     static String lan_key = "minwain_lan";
     static String words_key = "minwain_words";
     public static final String USERID = "minwain_id";
+    public static final String Tl = "tl_id";
     public static final String NAME = "minwain_name";
     public static final String LAW_USERID = "law_id";
     public static final String LAW_NAME = "law_name";
     static SharedPreferences sharedPreferences;
     static Context context;
-
+    public static void setLawTl(Context context, String tl) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(Tl, tl);
+        editor.commit();
+    }
+    public static String getLawTl(Context context) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return sharedPreferences.getString(Tl, "No");
+    }
     public static void setUserid(Context context, String member_id, String name) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = sharedPreferences.edit();

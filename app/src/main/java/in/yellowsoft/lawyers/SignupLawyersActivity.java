@@ -54,53 +54,81 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class SignupLawyersActivity extends Activity {
-    EditText fname,lname,uname,pass,phone,about,location;
-    LinearLayout register,areas_pop,area_ll,banner_ll,cal;
-    TextView email,register_tv,areas_tv,areas_title_tv,banner_tv,licenced;
+    EditText fname,lname,uname,pass,phone,about;
+    LinearLayout register,areas_pop,area_ll,banner_ll,cal,pass_ll;
+    TextView email,register_tv,areas_tv,areas_title_tv,banner_tv,licenced,location;
     ListView listview;
     ImageView close,banner;
     CircleImageView law_img;
     HashMap<String, String> areas;
+    HashMap<String, String> areas_t;
     AreasListAdapter areasListAdapter;
     ArrayList<String> area_id;
     ArrayList<String> area_title;
     private int mYear, mMonth, mDay;
     String date,ar;
+    String lat="",lon="",adr="";
+    Boolean is_edit=false;
+    Boolean is_location_added=false;
     String emailPattern = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Settings.forceRTLIfSupported(this);
         setContentView(R.layout.signup_lawyers_activity);
+        email=(TextView)findViewById(R.id.law_signup_email);
+        pass_ll=(LinearLayout)findViewById(R.id.pass_ll_law_signup);
+        pass_ll.setVisibility(View.VISIBLE);
         Uri data = getIntent().getData();
-        String scheme = data.getScheme(); // "http"
-        String host = data.getHost(); // "twitter.com"
-        List<String> params = data.getPathSegments();
+        if(getIntent().getData()==null){
+            is_edit=true;
+            get_lawyer_details();
+            pass_ll.setVisibility(View.GONE);
+        }else {
+            String scheme = data.getScheme(); // "http"
+            String host = data.getHost(); // "twitter.com"
+            List<String> params = data.getPathSegments();
 
-        for(int i=0;i<params.size();i++){
-            Log.e("prams_size", params.get(i));
+            for (int i = 0; i < params.size(); i++) {
+                Log.e("prams_size", params.get(i));
+            }
+            String first = params.get(0); // "status"
+            String second = params.get(1);
+            email.setText(second);
+            pass_ll.setVisibility(View.VISIBLE);
         }
-        String first = params.get(0); // "status"
-        String second = params.get(1);
         areas = new HashMap<>();
+        areas_t = new HashMap<>();
         area_id=new ArrayList<>();
         area_title=new ArrayList<>();
         get_areas();
         law_img=(CircleImageView)findViewById(R.id.lawyer_image);
         fname=(EditText)findViewById(R.id.law_signup_fname);
+        fname.setHint(Settings.getword(this,"First Name"));
         lname=(EditText)findViewById(R.id.law_signup_lname);
+        lname.setHint(Settings.getword(this,"Last Name"));
         uname=(EditText)findViewById(R.id.law_signup_uname);
+        uname.setHint(Settings.getword(this,"Name"));
         pass=(EditText)findViewById(R.id.law_signup_pass);
+        pass.setHint(Settings.getword(this,"Password"));
         phone=(EditText)findViewById(R.id.law_signup_phone);
+        phone.setHint(Settings.getword(this,"Phone Number"));
         about=(EditText)findViewById(R.id.law_signup_about);
-        location=(EditText)findViewById(R.id.law_signup_location);
+        about.setHint(Settings.getword(this, "About"));
+        location=(TextView)findViewById(R.id.law_signup_location);
+        location.setText(Settings.getword(this, "Location"));
 
-        email=(TextView)findViewById(R.id.law_signup_email);
-        email.setText(second);
+
         licenced=(TextView)findViewById(R.id.law_signup_licenced);
+        licenced.setText(Settings.getword(this, "Licensed"));
         register_tv=(TextView)findViewById(R.id.law_register_tv);
+        register_tv.setText(Settings.getword(this, "register"));
         areas_tv=(TextView)findViewById(R.id.signup_pr_area_tv);
+        areas_tv.setText(Settings.getword(this, "Practice Areas"));
         areas_title_tv=(TextView)findViewById(R.id.areas_title);
+        areas_title_tv.setText(Settings.getword(this, "Practice Areas"));
         banner_tv=(TextView)findViewById(R.id.law_banner_tv);
+        banner_tv.setText(Settings.getword(this, "Banner Image"));
 
         register=(LinearLayout)findViewById(R.id.law_register_ll);
         area_ll=(LinearLayout)findViewById(R.id.signup_pr_area_ll);
@@ -113,7 +141,15 @@ public class SignupLawyersActivity extends Activity {
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String csv = "-1";
                 areas_pop.setVisibility(View.GONE);
+                for (Map.Entry<String, String> entry : areas_t.entrySet()) {
+                    if (csv.equals("-1"))
+                        csv = entry.getValue();
+                    else
+                        csv = csv + "," + entry.getValue();
+                }
+                areas_tv.setText(csv);
             }
         });
         area_ll.setOnClickListener(new View.OnClickListener() {
@@ -135,6 +171,18 @@ public class SignupLawyersActivity extends Activity {
                 selectphotos();
             }
         });
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignupLawyersActivity.this,MapActivity.class);
+                startActivityForResult(intent, 201);
+            }
+        });
+        if(is_edit){
+            register_tv.setText(Settings.getword(this, "update"));
+        }else{
+            register_tv.setText(Settings.getword(this, "register"));
+        }
         cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -162,60 +210,97 @@ public class SignupLawyersActivity extends Activity {
             }
         });
         listview=(ListView)findViewById(R.id.area_listview);
-        areasListAdapter=new AreasListAdapter(this,area_id,area_title);
+        areasListAdapter=new AreasListAdapter(this,area_id,area_title,areas);
         listview.setAdapter(areasListAdapter);
+        listview.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        listview.setItemsCanFocus(false);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ar = area_id.get(position);
-                areas_pop.setVisibility(View.GONE);
-                areas_tv.setText(ar);
-//                if (areas.containsKey(area_id.get(position)))
-//                    areas.remove(area_id.get(position));
-//                else {
-//                    areas.put(area_id.get(position), area_id.get(position));
-//                }
-//                JSONObject jsonObject = new JSONObject(areas);
-//                Log.e("areas", jsonObject.toString());
+//                ar = area_id.get(position);
+//                areas_pop.setVisibility(View.GONE);
+//                areas_tv.setText(ar);
+                if (areas.containsKey(area_id.get(position))) {
+                    areas.remove(area_id.get(position));
+                    areas_t.remove(area_id.get(position));
+                }
+                else {
+                    areas.put(area_id.get(position), area_id.get(position));
+                    areas_t.put(area_id.get(position), area_title.get(position));
+                }
+                JSONObject jsonObject = new JSONObject(areas);
+                Log.e("areas", jsonObject.toString());
+                areasListAdapter.notifyDataSetChanged();
             }
         });
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (uname.getText().toString().equals("")) {
-                    Toast.makeText(SignupLawyersActivity.this, "please enter name", Toast.LENGTH_SHORT).show();
-                } else if (email.getText().toString().equals("")) {
-                    Toast.makeText(SignupLawyersActivity.this, "please enter email id", Toast.LENGTH_SHORT).show();
-                } else if (!email.getText().toString().matches(emailPattern)) {
-                    Toast.makeText(SignupLawyersActivity.this, "Please Enter Valid Email id", Toast.LENGTH_SHORT).show();
-                } else if (pass.getText().toString().equals("")) {
-                    Toast.makeText(SignupLawyersActivity.this, "please enter password", Toast.LENGTH_SHORT).show();
-                } else if (phone.getText().toString().equals("")) {
-                    Toast.makeText(SignupLawyersActivity.this, "please enter phone number", Toast.LENGTH_SHORT).show();
-                } else if (date.equals("")) {
-                    Toast.makeText(SignupLawyersActivity.this, "please enter Licenced Since", Toast.LENGTH_SHORT).show();
-                } else if (location.getText().toString().equals("")) {
-                    Toast.makeText(SignupLawyersActivity.this, "please enter  Location", Toast.LENGTH_SHORT).show();
-                } else if (about.getText().toString().equals("")) {
-                    Toast.makeText(SignupLawyersActivity.this, "please enter about your self", Toast.LENGTH_SHORT).show();
+              if(!is_edit) {
+                  if (uname.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_name"), Toast.LENGTH_SHORT).show();
+                  } else if (email.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this,Settings.getword(SignupLawyersActivity.this,"empty_email"), Toast.LENGTH_SHORT).show();
+                  } else if (!email.getText().toString().matches(emailPattern)) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_email_valid"), Toast.LENGTH_SHORT).show();
+                  } else if (pass.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_password"), Toast.LENGTH_SHORT).show();
+                  } else if (phone.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_phone"), Toast.LENGTH_SHORT).show();
+                  } else if (date.equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_licence"), Toast.LENGTH_SHORT).show();
+                  } else if (location.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_location"), Toast.LENGTH_SHORT).show();
+                  } else if (about.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_about"), Toast.LENGTH_SHORT).show();
 //                } else if (areas.size()==0) {
-//                    Toast.makeText(SignupLawyersActivity.this, "please Select practice areas", Toast.LENGTH_SHORT).show();
-                } else {
+//                    Toast.makeText(SignupLawyersActivity.this,Settings.getword(SignupLawyersActivity.this,"empty_area"), Toast.LENGTH_SHORT).show();
+                  } else {
 //                    viewFlipper.setDisplayedChild(0);
-                    register();
-                }
+                      register();
+                  }
+              }else{
+                  if (uname.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_name"), Toast.LENGTH_SHORT).show();
+                  } else if (email.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this,Settings.getword(SignupLawyersActivity.this,"empty_email"), Toast.LENGTH_SHORT).show();
+                  } else if (!email.getText().toString().matches(emailPattern)) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_email_valid"), Toast.LENGTH_SHORT).show();
+                  } else if (phone.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_phone"), Toast.LENGTH_SHORT).show();
+                  } else if (date.equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_licence"), Toast.LENGTH_SHORT).show();
+                  } else if (location.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_location"), Toast.LENGTH_SHORT).show();
+                  } else if (about.getText().toString().equals("")) {
+                      Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"empty_about"), Toast.LENGTH_SHORT).show();
+//                } else if (areas.size()==0) {
+//                    Toast.makeText(SignupLawyersActivity.this,Settings.getword(SignupLawyersActivity.this,"empty_area"), Toast.LENGTH_SHORT).show();
+                  } else {
+//                    viewFlipper.setDisplayedChild(0);
+                      register();
+                  }
+              }
             }
+
         });
         Log.e(uname.getText().toString()+1, email.getText().toString() + pass.getText().toString()
                 + phone.getText().toString() + licenced.getText().toString() + location.getText().toString() + about.getText().toString()
                 + ar);
     }public  void register(){
+        String url="";
         final ProgressDialog progressDialog = new ProgressDialog(this);
 //        progressDialog.setMessage(Settings.getword(this, "please_wait"));
-        progressDialog.setMessage("Please wait....");
+        progressDialog.setMessage(Settings.getword(SignupLawyersActivity.this,"please_wait"));
         progressDialog.show();
         progressDialog.setCancelable(false);
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Settings.law_signup_url,new Response.Listener<String>() {
+        if(is_edit){
+             url=Settings.law_edit_profile_url;
+        }else{
+             url=Settings.law_signup_url;
+        }
+            Log.e("url",url);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("res", response);
@@ -230,23 +315,38 @@ public class SignupLawyersActivity extends Activity {
                         Toast.makeText(SignupLawyersActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                     else {
-                        String mem_id = jsonObject.getString("lawyer_id");
-                        String msg = jsonObject.getString("message");
-                        Settings.setLawyerUserid(SignupLawyersActivity.this, mem_id, "law");
-                        Settings.setUserid(SignupLawyersActivity.this, mem_id, "law");
-                        Log.e("l_id", mem_id);
-                        Log.e("imgPath",imgPath );
-                        if(imgPath.equals("-1")){
-                            if(!isimgchoosen) {
-                                Toast.makeText(SignupLawyersActivity.this, msg, Toast.LENGTH_SHORT).show();
-                                Intent intent= new Intent(SignupLawyersActivity.this,TimelineActivity.class);
-                                startActivity(intent);
-                                finish();
-                            }else{
-                                encodeImagetoString_banner();
+                        if(is_edit) {
+                            String msg = jsonObject.getString("message");
+                            Toast.makeText(SignupLawyersActivity.this, msg, Toast.LENGTH_SHORT).show();
+                            if (imgPath.equals("-1")) {
+                                if (!isimgchoosen) {
+                                    finish();
+                                } else {
+                                    encodeImagetoString_banner();
+                                }
+                            } else {
+                                encodeImagetoString_lawyer();
                             }
-                        }else{
-                            encodeImagetoString_lawyer();
+
+                        } else{
+                            String mem_id = jsonObject.getString("lawyer_id");
+                            String msg = jsonObject.getString("message");
+                            Settings.setLawyerUserid(SignupLawyersActivity.this, mem_id, "law");
+                            Settings.setUserid(SignupLawyersActivity.this, mem_id, "law");
+                            Log.e("l_id", mem_id);
+                            Log.e("imgPath", imgPath);
+                            Toast.makeText(SignupLawyersActivity.this, msg, Toast.LENGTH_SHORT).show();
+                            if (imgPath.equals("-1")) {
+                                if (!isimgchoosen) {
+                                    Intent intent = new Intent(SignupLawyersActivity.this, TimelineActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    encodeImagetoString_banner();
+                                }
+                            } else {
+                                encodeImagetoString_lawyer();
+                            }
                         }
                     }
 
@@ -264,18 +364,19 @@ public class SignupLawyersActivity extends Activity {
                     }
                 }){
             @Override
-            protected Map<String,String> getParams(){
-                Map<String,String> params = new HashMap<String, String>();
+            protected Map<String,String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
                 Log.e(uname.getText().toString(), email.getText().toString() + pass.getText().toString()
                         + phone.getText().toString() + licenced.getText().toString() + location.getText().toString() + about.getText().toString()
                         + ar);
-                params.put("name",uname.getText().toString());
-                params.put("email",email.getText().toString());
-                params.put("password",pass.getText().toString());
-                params.put("phone",phone.getText().toString());
-                params.put("licenced",licenced.getText().toString());
-                params.put("location",location.getText().toString());
-                params.put("about",about.getText().toString());
+                params.put("name", uname.getText().toString());
+                params.put("email", email.getText().toString());
+                params.put("phone", phone.getText().toString());
+                params.put("licenced", licenced.getText().toString());
+                params.put("location", location.getText().toString());
+                params.put("latitude", lat);
+                params.put("longitude", lon);
+                params.put("about", about.getText().toString());
                 String csv = "-1";
                 for (Map.Entry<String, String> entry : areas.entrySet()) {
                     if (csv.equals("-1"))
@@ -283,7 +384,12 @@ public class SignupLawyersActivity extends Activity {
                     else
                         csv = csv + "," + entry.getValue();
                 }
-                params.put("areas", ar);
+                params.put("areas", csv);
+                if (is_edit) {
+                    params.put("lawyer_id", Settings.getUserid(SignupLawyersActivity.this));
+                }else{
+                    params.put("password", pass.getText().toString());
+                }
                 return params;
             }
         };
@@ -294,7 +400,7 @@ public class SignupLawyersActivity extends Activity {
         String url = Settings.Areas_url;
         Log.e("url--->", url);
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Please wait....");
+        progressDialog.setMessage(Settings.getword(SignupLawyersActivity.this,"please_wait"));
         progressDialog.setCancelable(false);
         JsonArrayRequest jsObjRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
@@ -318,7 +424,7 @@ public class SignupLawyersActivity extends Activity {
             public void onErrorResponse(VolleyError error) {
                 // TODO Auto-generated method stub
                 Log.e("response is:", error.toString());
-                Toast.makeText(SignupLawyersActivity.this, "Server not connected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignupLawyersActivity.this,Settings.getword(SignupLawyersActivity.this,"server_not_connected"), Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
             }
 
@@ -429,6 +535,15 @@ public class SignupLawyersActivity extends Activity {
                     .decodeFile(imgDecodableString));
 //            Picasso.with(SignupLawyersActivity.this).load(BitmapFactory.decodeFile(imgDecodableString)).into(banner);
             isimgchoosen = true;
+        } else if(requestCode == 201) {
+            if(data!=null) {
+                is_location_added = true;
+                lat = data.getStringExtra("lat");
+                lon = data.getStringExtra("lon");
+                adr = data.getStringExtra("adr");
+                Log.e("addrerss", adr);
+                location.setText(adr);
+            }
         }else{
             Log.e("activity","not returned");
         }
@@ -573,10 +688,13 @@ public class SignupLawyersActivity extends Activity {
                         if(isimgchoosen) {
                             encodeImagetoString_banner();
                         }else{
-                            Intent intent = new Intent(SignupLawyersActivity.this, TimelineActivity.class);
-                            intent.putExtra("type","law");
-                            startActivity(intent);
-                            finish();
+                            if(is_edit){
+                                finish();
+                            }else {
+                                Intent intent = new Intent(SignupLawyersActivity.this, TimelineActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
                         }
 
                     }
@@ -630,10 +748,13 @@ public class SignupLawyersActivity extends Activity {
                     if(reply.equals("Success")) {
                         String msg = jsonObject.getString("message");
                         Toast.makeText(SignupLawyersActivity.this, msg, Toast.LENGTH_SHORT).show();
-                        Intent intent= new Intent(SignupLawyersActivity.this,TimelineActivity.class);
-                        intent.putExtra("type","law");
-                        startActivity(intent);
-                        finish();
+                        if(is_edit){
+                            finish();
+                        }else {
+                            Intent intent = new Intent(SignupLawyersActivity.this, TimelineActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
 
                     }
                     else {
@@ -666,7 +787,59 @@ public class SignupLawyersActivity extends Activity {
         };
         AppController.getInstance().addToRequestQueue(stringRequest);
     }
+    private void get_lawyer_details() {
+        String url = Settings.Lawyers_url+"?&lawyer_id="+Settings.getUserid(SignupLawyersActivity.this);
+        Log.e("url--->", url);
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage(Settings.getword(SignupLawyersActivity.this,"please_wait"));
+        progressDialog.setCancelable(false);
+        JsonArrayRequest jsObjRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray jsonObject) {
+                progressDialog.dismiss();
+                Log.e("response is: ", jsonObject.toString());
+                try {
 
+                    for (int i = 0; i < jsonObject.length(); i++) {
+                        JSONObject sub = jsonObject.getJSONObject(i);
+                        uname.setText(sub.getString("name"));
+                        email.setText(sub.getString("email"));
+                        phone.setText(sub.getString("phone"));
+                        licenced.setText(sub.getString("licenced"));
+                        date=sub.getString("licenced");
+                        location.setText(sub.getString("location"));
+                        lat=sub.getString("latitude");
+                        lon=sub.getString("longitude");
+                        about.setText(sub.getString("about"));
+                        areas_tv.setText(sub.getJSONArray("areas").getJSONObject(0).getString("title" + Settings.get_lan(SignupLawyersActivity.this)));
+                        ar=sub.getJSONArray("areas").getJSONObject(0).getString("id");
+                        Picasso.with(SignupLawyersActivity.this).load(sub.getString("image")).into(law_img);
+                        Picasso.with(SignupLawyersActivity.this).load(sub.getString("background_image")).into(banner);
+                        for(int j=0;j<sub.getJSONArray("areas").length();j++){
+                            areas.put(sub.getJSONArray("areas").getJSONObject(0).getString("id"),sub.getJSONArray("areas").getJSONObject(0).getString("id"));
+                            areas_t.put(sub.getJSONArray("areas").getJSONObject(0).getString("id"),sub.getJSONArray("areas").getJSONObject(0).getString("title" + Settings.get_lan(SignupLawyersActivity.this)));
+                        }
+                        areasListAdapter.notifyDataSetChanged();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+                Log.e("response is:", error.toString());
+                Toast.makeText(SignupLawyersActivity.this, Settings.getword(SignupLawyersActivity.this,"server_not_connected"), Toast.LENGTH_SHORT).show();
+                progressDialog.dismiss();
+            }
+
+        });
+        AppController.getInstance().addToRequestQueue(jsObjRequest);
+
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

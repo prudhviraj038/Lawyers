@@ -8,20 +8,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <ViewFlipper
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/viewFlipper4" >
 
-            <ViewFlipper
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/viewFlipper" >
+                android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:orientation="vertical"
+                <ViewFlipper
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:id="@+id/viewFlipper" >
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -29,109 +29,109 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:background="@color/menu_back"
-                            android:padding="5dp"
-                            android:gravity="center_vertical">
-
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:id="@+id/login_back"
-                                android:src="@drawable/back" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="New Text"
-                                android:id="@+id/textView3"
-                                android:visibility="invisible"
-                                android:layout_weight="1" />
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginTop="2dp"
-                                android:layout_marginRight="15dp"
-                                android:background="@drawable/ar_rounded_corners"
-                                android:id="@+id/lan_ll">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Ar"
-                                    android:id="@+id/lan_tv"
-                                    android:textColor="#c69a32"
-                                    android:textSize="18sp"
-                                    android:gravity="center"
-                                    android:layout_marginLeft="4dp"
-                                    android:layout_marginRight="4dp"
-                                    android:layout_marginTop="2dp"
-                                    android:layout_marginBottom="2dp" />
-                            </LinearLayout>
+                            android:layout_height="match_parent">
 
                             <LinearLayout
                                 android:orientation="horizontal"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:id="@+id/skip_ll">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="SKIP"
-                                    android:id="@+id/skip_tv"
-                                    android:textColor="#c69a32"
-                                    android:textSize="18sp"
-                                    android:layout_marginTop="2dp" />
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@color/menu_back"
+                                android:padding="5dp"
+                                android:gravity="center_vertical">
 
                                 <ImageView
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:id="@+id/imageView31"
-                                    android:src="@drawable/revback" />
-                            </LinearLayout>
-                        </LinearLayout>
+                                    android:id="@+id/login_back"
+                                    android:src="@drawable/back" />
 
-                        <ScrollView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:id="@+id/scrollView"
-                            android:foregroundGravity="center">
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:paddingLeft="30dp"
-                                android:paddingTop="15dp"
-                                android:paddingRight="30dp"
-                                android:paddingBottom="30dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="New Text"
+                                    android:id="@+id/textView3"
+                                    android:visibility="invisible"
+                                    android:layout_weight="1" />
 
                                 <LinearLayout
                                     android:orientation="vertical"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:layout_marginBottom="20dp">
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@drawable/ar_rounded_corners"
+                                    android:id="@+id/lan_ll">
 
-                                    <ImageView
+                                    <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="130dp"
-                                        android:id="@+id/imageView"
-                                        android:src="@drawable/logo" />
+                                        android:layout_height="wrap_content"
+                                        android:text="Ar"
+                                        android:id="@+id/lan_tv"
+                                        android:textColor="#c69a32"
+                                        android:textSize="18sp"
+                                        android:gravity="center"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginRight="4dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_marginBottom="2dp" />
                                 </LinearLayout>
 
                                 <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:id="@+id/skip_ll">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="SKIP"
+                                        android:id="@+id/skip_tv"
+                                        android:textColor="#c69a32"
+                                        android:textSize="18sp"
+                                        android:layout_marginTop="2dp" />
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/imageView31"
+                                        android:src="@drawable/revback" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/scrollView"
+                                android:foregroundGravity="center">
+
+                                <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:paddingLeft="30dp"
+                                    android:paddingTop="15dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingBottom="30dp">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_marginBottom="20dp">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="130dp"
+                                            android:id="@+id/imageView"
+                                            android:src="@drawable/logo" />
+                                    </LinearLayout>
 
                                     <LinearLayout
                                         android:orientation="vertical"
@@ -141,281 +141,278 @@
                                         <LinearLayout
                                             android:orientation="vertical"
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:background="@drawable/white_rounded_corners">
+                                            android:layout_height="wrap_content">
 
                                             <LinearLayout
-                                                android:orientation="horizontal"
+                                                android:orientation="vertical"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:padding="15dp">
-
-                                                <ImageView
-                                                    android:layout_width="25dp"
-                                                    android:layout_height="25dp"
-                                                    android:id="@+id/imageView2"
-                                                    android:src="@drawable/email" />
+                                                android:background="@drawable/white_rounded_corners">
 
                                                 <LinearLayout
-                                                    android:orientation="vertical"
-                                                    android:layout_width="25dp"
-                                                    android:layout_height="match_parent"></LinearLayout>
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:padding="15dp">
+
+                                                    <ImageView
+                                                        android:layout_width="25dp"
+                                                        android:layout_height="25dp"
+                                                        android:id="@+id/imageView2"
+                                                        android:src="@drawable/email" />
+
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="25dp"
+                                                        android:layout_height="match_parent"></LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:gravity="center_vertical">
+
+                                                        <EditText
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:inputType="textEmailAddress"
+                                                            android:id="@+id/login_email"
+                                                            android:background="#00000000"
+                                                            android:textColor="@color/text_black"
+                                                            android:hint="E-mail Address"
+                                                            android:textColorHint="@color/text_black"
+                                                            android:textSize="14sp"
+                                                            android:singleLine="true" />
+                                                    </LinearLayout>
+
+                                                </LinearLayout>
 
                                                 <LinearLayout
                                                     android:orientation="vertical"
                                                     android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center_vertical">
+                                                    android:layout_height="1dp"
+                                                    android:background="#e5e5e5"></LinearLayout>
 
-                                                    <EditText
+                                                <LinearLayout
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:padding="15dp">
+
+                                                    <ImageView
+                                                        android:layout_width="25dp"
+                                                        android:layout_height="25dp"
+                                                        android:id="@+id/imageView3"
+                                                        android:src="@drawable/password" />
+
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="25dp"
+                                                        android:layout_height="match_parent" />
+
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
                                                         android:layout_width="match_parent"
-                                                        android:layout_height="wrap_content"
-                                                        android:inputType="textEmailAddress"
-                                                        android:id="@+id/login_email"
-                                                        android:background="#00000000"
-                                                        android:textColor="@color/text_black"
-                                                        android:hint="E-mail Address"
-                                                        android:textColorHint="@color/text_black"
-                                                        android:textSize="14sp"
-                                                        android:singleLine="true" />
+                                                        android:layout_height="match_parent"
+                                                        android:gravity="center_vertical">
+
+                                                        <EditText
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:id="@+id/login_pass"
+                                                            android:background="#00000000"
+                                                            android:textColor="@color/text_black"
+                                                            android:hint="Password"
+                                                            android:textColorHint="@color/text_black"
+                                                            android:textSize="14sp"
+                                                            android:singleLine="true"
+                                                            android:inputType="textPassword" />
+                                                    </LinearLayout>
                                                 </LinearLayout>
 
                                             </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="5dp"
+                                                android:paddingRight="5dp">
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="3dp"
+                                                    android:background="@color/line_color"></LinearLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:padding="10dp">
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1">
+
+                                                <LinearLayout
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:gravity="center_vertical"
+                                                    android:id="@+id/radio_law_ll">
+
+                                                    <ImageView
+                                                        android:layout_width="20dp"
+                                                        android:layout_height="20dp"
+                                                        android:id="@+id/radio_law_img"
+                                                        android:src="@drawable/radio_empty" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Login as Lawyer"
+                                                        android:id="@+id/radio_law_tv"
+                                                        android:textColor="#000"
+                                                        android:layout_marginLeft="15dp"
+                                                        android:layout_marginRight="15dp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:id="@+id/radio_user_ll">
+
+                                                    <ImageView
+                                                        android:layout_width="20dp"
+                                                        android:layout_height="20dp"
+                                                        android:id="@+id/radio_user_img"
+                                                        android:src="@drawable/radio_empty" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Login as User"
+                                                        android:id="@+id/radio_user_tv"
+                                                        android:textColor="#000"
+                                                        android:layout_marginLeft="15dp"
+                                                        android:layout_marginRight="15dp" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:text="Forgot Password"
+                                                android:id="@+id/forgot_password"
+                                                android:textColor="#564739"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold"
+                                                android:gravity="center" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/login_rounded_corners"
+                                            android:id="@+id/signin_ll"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:layout_marginTop="20dp">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Sign in"
+                                                android:id="@+id/signin_tv"
+                                                android:textColor="#ffffff"
+                                                android:textSize="15sp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"></LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:paddingLeft="50dp"
+                                            android:paddingRight="50dp">
 
                                             <LinearLayout
                                                 android:orientation="vertical"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="1dp"
-                                                android:background="#e5e5e5"></LinearLayout>
-
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:padding="15dp">
-
-                                                <ImageView
-                                                    android:layout_width="25dp"
-                                                    android:layout_height="25dp"
-                                                    android:id="@+id/imageView3"
-                                                    android:src="@drawable/password" />
-
-                                                <LinearLayout
-                                                    android:orientation="vertical"
-                                                    android:layout_width="25dp"
-                                                    android:layout_height="match_parent" />
-
-                                                <LinearLayout
-                                                    android:orientation="vertical"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center_vertical">
-
-                                                    <EditText
-                                                        android:layout_width="match_parent"
-                                                        android:layout_height="wrap_content"
-                                                        android:id="@+id/login_pass"
-                                                        android:background="#00000000"
-                                                        android:textColor="@color/text_black"
-                                                        android:hint="Password"
-                                                        android:textColorHint="@color/text_black"
-                                                        android:textSize="14sp"
-                                                        android:singleLine="true"
-                                                        android:inputType="textPassword" />
-                                                </LinearLayout>
-                                            </LinearLayout>
-
+                                                android:background="#b1a193"></LinearLayout>
                                         </LinearLayout>
 
                                         <LinearLayout
                                             android:orientation="vertical"
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:paddingLeft="5dp"
-                                            android:paddingRight="5dp">
+                                            android:layout_height="40dp" />
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/registellll">
 
                                             <LinearLayout
                                                 android:orientation="vertical"
                                                 android:layout_width="match_parent"
-                                                android:layout_height="3dp"
-                                                android:background="@color/line_color"></LinearLayout>
-                                        </LinearLayout>
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:orientation="horizontal"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="center_vertical"
-                                        android:padding="10dp">
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1">
-
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginBottom="10dp"
-                                                android:gravity="center_vertical"
-                                                android:id="@+id/radio_law_ll">
-
-                                                <ImageView
-                                                    android:layout_width="20dp"
-                                                    android:layout_height="20dp"
-                                                    android:id="@+id/radio_law_img"
-                                                    android:src="@drawable/radio_empty" />
+                                                android:layout_height="40dp"
+                                                android:background="@drawable/signup_lawyer_rounded_corners"
+                                                android:id="@+id/signup_law_ll"
+                                                android:gravity="center"
+                                                android:padding="5dp">
 
                                                 <TextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:text="Login as Lawyer"
-                                                    android:id="@+id/radio_law_tv"
-                                                    android:textColor="#000"
-                                                    android:layout_marginLeft="15dp"
-                                                    android:layout_marginRight="15dp" />
+                                                    android:text="Sign Up As Lawyer"
+                                                    android:id="@+id/signup_law_tv"
+                                                    android:textColor="#ffffff"
+                                                    android:textSize="15sp" />
                                             </LinearLayout>
 
                                             <LinearLayout
-                                                android:orientation="horizontal"
+                                                android:orientation="vertical"
                                                 android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:gravity="center_vertical"
-                                                android:id="@+id/radio_user_ll">
-
-                                                <ImageView
-                                                    android:layout_width="20dp"
-                                                    android:layout_height="20dp"
-                                                    android:id="@+id/radio_user_img"
-                                                    android:src="@drawable/radio_empty" />
+                                                android:layout_height="40dp"
+                                                android:background="@drawable/signup_user_rounded_corners"
+                                                android:id="@+id/signup_user_ll"
+                                                android:gravity="center"
+                                                android:padding="5dp"
+                                                android:layout_marginTop="10dp" >
 
                                                 <TextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:text="Login as User"
-                                                    android:id="@+id/radio_user_tv"
-                                                    android:textColor="#000"
-                                                    android:layout_marginLeft="15dp"
-                                                    android:layout_marginRight="15dp" />
+                                                    android:text="Sign Up As User"
+                                                    android:id="@+id/signup_user_tv"
+                                                    android:textColor="#ffffff"
+                                                    android:textSize="15sp" />
                                             </LinearLayout>
                                         </LinearLayout>
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="match_parent"
-                                            android:text="Forgot Password"
-                                            android:id="@+id/forgot_password"
-                                            android:textColor="#564739"
-                                            android:textSize="15sp"
-                                            android:textStyle="bold"
-                                            android:gravity="center" />
                                     </LinearLayout>
 
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:background="@drawable/login_rounded_corners"
-                                        android:id="@+id/signin_ll"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:layout_marginTop="20dp">
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Sign in"
-                                            android:id="@+id/signin_tv"
-                                            android:textColor="#ffffff"
-                                            android:textSize="15sp"
-                                            android:layout_margin="10dp" />
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="40dp"></LinearLayout>
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:paddingLeft="50dp"
-                                        android:paddingRight="50dp">
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="1dp"
-                                            android:background="#b1a193"></LinearLayout>
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="40dp" />
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/registellll">
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:background="@drawable/signup_lawyer_rounded_corners"
-                                            android:id="@+id/signup_law_ll"
-                                            android:gravity="center"
-                                            android:padding="5dp">
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:text="Sign Up As Lawyer"
-                                                android:id="@+id/signup_law_tv"
-                                                android:textColor="#ffffff"
-                                                android:textSize="15sp"
-                                                android:layout_margin="10dp" />
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:background="@drawable/signup_user_rounded_corners"
-                                            android:id="@+id/signup_user_ll"
-                                            android:gravity="center"
-                                            android:padding="5dp"
-                                            android:layout_marginTop="10dp" >
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:text="Sign Up As User"
-                                                android:id="@+id/signup_user_tv"
-                                                android:textColor="#ffffff"
-                                                android:textSize="15sp"
-                                                android:layout_margin="10dp" />
-                                        </LinearLayout>
-                                    </LinearLayout>
                                 </LinearLayout>
+                            </ScrollView>
 
-                            </LinearLayout>
-                        </ScrollView>
+                        </LinearLayout>
 
                     </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -423,501 +420,743 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:background="@color/menu_back"
-                            android:padding="5dp"
-                            android:gravity="center_vertical" >
-
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:id="@+id/back_sign2"
-                                android:src="@drawable/back" />
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginTop="2dp"
-                                android:layout_marginRight="15dp"
-                                android:background="@drawable/ar_rounded_corners"
-                                android:id="@+id/linearLayout2"
-                                android:visibility="gone">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Ar"
-                                    android:id="@+id/textView12"
-                                    android:textColor="#c69a32"
-                                    android:textSize="18sp"
-                                    android:gravity="center"
-                                    android:layout_marginLeft="4dp"
-                                    android:layout_marginRight="4dp"
-                                    android:layout_marginTop="2dp"
-                                    android:layout_marginBottom="2dp" />
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="New Text"
-                                android:id="@+id/textView11"
-                                android:visibility="invisible"
-                                android:layout_weight="1" />
+                            android:layout_height="match_parent">
 
                             <LinearLayout
                                 android:orientation="horizontal"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:id="@+id/linearLayout3"
-                                android:visibility="gone">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="SKIP"
-                                    android:id="@+id/textView13"
-                                    android:textColor="#c69a32"
-                                    android:textSize="18sp"
-                                    android:layout_marginTop="2dp" />
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@color/menu_back"
+                                android:padding="5dp"
+                                android:gravity="center_vertical" >
 
                                 <ImageView
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:id="@+id/imageView37"
-                                    android:src="@drawable/revback" />
+                                    android:id="@+id/back_sign2"
+                                    android:src="@drawable/back" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@drawable/ar_rounded_corners"
+                                    android:id="@+id/linearLayout2"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ar"
+                                        android:id="@+id/textView12"
+                                        android:textColor="#c69a32"
+                                        android:textSize="18sp"
+                                        android:gravity="center"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginRight="4dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_marginBottom="2dp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="New Text"
+                                    android:id="@+id/textView11"
+                                    android:visibility="invisible"
+                                    android:layout_weight="1" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:id="@+id/linearLayout3"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="SKIP"
+                                        android:id="@+id/textView13"
+                                        android:textColor="#c69a32"
+                                        android:textSize="18sp"
+                                        android:layout_marginTop="2dp" />
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/imageView37"
+                                        android:src="@drawable/revback" />
+                                </LinearLayout>
                             </LinearLayout>
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/scrollView2" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="30dp"
+                                    android:paddingTop="15dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingBottom="30dp">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_marginBottom="20dp" >
+
+                                        <RelativeLayout
+                                            android:layout_width="120dp"
+                                            android:layout_height="120dp" >
+
+                                            <view
+                                                class="de.hdodenhof.circleimageview.CircleImageView"
+                                                android:layout_width="110dp"
+                                                android:layout_height="110dp"
+                                                android:id="@+id/user_image"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/timeline_photo" />
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:id="@+id/imageView18"
+                                                android:src="@drawable/lawyer_page_circle"
+                                                android:layout_centerInParent="true" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_marginBottom="20dp"
+                                        android:visibility="gone">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="130dp"
+                                            android:id="@+id/imageView4"
+                                            android:src="@drawable/logo" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:showDividers="middle"
+                                        android:divider="@drawable/register_divider">
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" >
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:padding="10dp"
+                                                android:background="@drawable/white_rounded_corners" >
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_height="25dp"
+                                                    android:id="@+id/imageView7"
+                                                    android:src="@drawable/email"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="15dp"
+                                                    android:layout_height="match_parent"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center_vertical" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:id="@+id/reg_fname"
+                                                        android:background="#00000000"
+                                                        android:textColor="@color/text_black"
+                                                        android:hint="First Name"
+                                                        android:textColorHint="@color/text_black"
+                                                        android:textSize="14sp"
+                                                        android:singleLine="true" />
+
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="5dp"
+                                                android:paddingRight="5dp" >
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="2dp"
+                                                    android:background="@color/line_color" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" >
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:padding="10dp"
+                                                android:background="@drawable/white_rounded_corners" >
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_height="25dp"
+                                                    android:id="@+id/imageView8"
+                                                    android:src="@drawable/email"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="15dp"
+                                                    android:layout_height="match_parent"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center_vertical" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:id="@+id/reg_lname"
+                                                        android:background="#00000000"
+                                                        android:textColor="@color/text_black"
+                                                        android:hint="Last Name"
+                                                        android:textColorHint="@color/text_black"
+                                                        android:textSize="14sp"
+                                                        android:singleLine="true" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="5dp"
+                                                android:paddingRight="5dp" >
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="2dp"
+                                                    android:background="@color/line_color" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" >
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:padding="10dp"
+                                                android:background="@drawable/white_rounded_corners" >
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_height="25dp"
+                                                    android:id="@+id/imageView9"
+                                                    android:src="@drawable/email"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="15dp"
+                                                    android:layout_height="match_parent"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center_vertical" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:id="@+id/reg_uname"
+                                                        android:background="#00000000"
+                                                        android:textColor="@color/text_black"
+                                                        android:hint="User Name"
+                                                        android:textColorHint="@color/text_black"
+                                                        android:textSize="14sp"
+                                                        android:singleLine="true" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="5dp"
+                                                android:paddingRight="5dp" >
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="2dp"
+                                                    android:background="@color/line_color" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" >
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:padding="10dp"
+                                                android:background="@drawable/white_rounded_corners" >
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_height="25dp"
+                                                    android:id="@+id/imageView6"
+                                                    android:src="@drawable/email"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="15dp"
+                                                    android:layout_height="match_parent"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center_vertical" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:id="@+id/reg_pass"
+                                                        android:background="#00000000"
+                                                        android:textColor="@color/text_black"
+                                                        android:hint="Password"
+                                                        android:textColorHint="@color/text_black"
+                                                        android:textSize="14sp"
+                                                        android:singleLine="true"
+                                                        android:inputType="textPassword" />
+
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="5dp"
+                                                android:paddingRight="5dp" >
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="2dp"
+                                                    android:background="@color/line_color" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:padding="10dp"
+                                                android:background="@drawable/white_rounded_corners">
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_height="25dp"
+                                                    android:id="@+id/imageView5"
+                                                    android:src="@drawable/email"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="15dp"
+                                                    android:layout_height="match_parent"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center_vertical" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:inputType="textEmailAddress"
+                                                        android:id="@+id/reg_email"
+                                                        android:background="#00000000"
+                                                        android:textColor="@color/text_black"
+                                                        android:hint="E-mail Address"
+                                                        android:textColorHint="@color/text_black"
+                                                        android:textSize="14sp"
+                                                        android:singleLine="true" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="5dp"
+                                                android:paddingRight="5dp" >
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="2dp"
+                                                    android:background="@color/line_color" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" >
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:padding="10dp"
+                                                android:background="@drawable/white_rounded_corners" >
+
+                                                <ImageView
+                                                    android:layout_width="25dp"
+                                                    android:layout_height="25dp"
+                                                    android:id="@+id/imageView10"
+                                                    android:src="@drawable/email"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="15dp"
+                                                    android:layout_height="match_parent"
+                                                    android:visibility="gone" />
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center_vertical" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:id="@+id/reg_phone"
+                                                        android:background="#00000000"
+                                                        android:textColor="@color/text_black"
+                                                        android:hint="Phone Number"
+                                                        android:textColorHint="@color/text_black"
+                                                        android:textSize="14sp"
+                                                        android:singleLine="true"
+                                                        android:inputType="phone" />
+
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="5dp"
+                                                android:paddingRight="5dp" >
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="2dp"
+                                                    android:background="@color/line_color" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/login_rounded_corners"
+                                        android:id="@+id/register_ll"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:layout_marginTop="40dp" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Register"
+                                            android:id="@+id/register_tv"
+                                            android:textColor="#ffffff"
+                                            android:textSize="18sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </ScrollView>
                         </LinearLayout>
 
-                        <ScrollView
+                    </LinearLayout>
+
+                </ViewFlipper>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/menu_back"
+                    android:padding="5dp"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/signup_law_back_img"
+                        android:src="@drawable/back" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="New Text"
+                        android:id="@+id/signup_law_title"
+                        android:layout_weight="1"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/imageView55"
+                        android:src="@drawable/back"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="50dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="130dp"
+                        android:id="@+id/imageView64"
+                        android:src="@drawable/logo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:layout_marginBottom="60dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#88000000"
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="30dp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/signup_pop_law"
+                        android:visibility="gone">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/pink_rounded_corners1">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/scrollView2" >
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView10"
+                                android:textColor="#000"
+                                android:textSize="20sp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/signup_close"
+                                android:src="@drawable/close" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp">
 
                             <LinearLayout
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:paddingLeft="30dp"
-                                android:paddingTop="15dp"
-                                android:paddingRight="30dp"
-                                android:paddingBottom="30dp">
+                                android:layout_height="match_parent" >
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:background="@drawable/white_rounded_corners" >
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/imageView36"
+                                        android:src="@drawable/email"
+                                        android:visibility="gone" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:visibility="gone" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical" >
+
+                                        <EditText
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/law_signup_email"
+                                            android:background="#00000000"
+                                            android:textColor="@color/text_black"
+                                            android:hint="Enter Email id"
+                                            android:textColorHint="@color/text_black"
+                                            android:textSize="14sp"
+                                            android:singleLine="true"
+                                            android:inputType="textEmailAddress" />
+                                    </LinearLayout>
+                                </LinearLayout>
 
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:layout_marginBottom="20dp" >
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="130dp"
-                                        android:id="@+id/imageView4"
-                                        android:src="@drawable/logo" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:showDividers="middle"
-                                    android:divider="@drawable/register_divider">
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp" >
 
                                     <LinearLayout
                                         android:orientation="vertical"
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent" >
-
-                                        <LinearLayout
-                                            android:orientation="horizontal"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:padding="10dp"
-                                            android:background="@drawable/white_rounded_corners" >
-
-                                            <ImageView
-                                                android:layout_width="25dp"
-                                                android:layout_height="25dp"
-                                                android:id="@+id/imageView7"
-                                                android:src="@drawable/email"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="15dp"
-                                                android:layout_height="match_parent"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:gravity="center_vertical" >
-
-                                                <EditText
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/reg_fname"
-                                                    android:background="#00000000"
-                                                    android:textColor="@color/text_black"
-                                                    android:hint="First Name"
-                                                    android:textColorHint="@color/text_black"
-                                                    android:textSize="14sp"
-                                                    android:singleLine="true" />
-
-                                            </LinearLayout>
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:paddingLeft="5dp"
-                                            android:paddingRight="5dp" >
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="2dp"
-                                                android:background="@color/line_color" />
-                                        </LinearLayout>
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent" >
-
-                                        <LinearLayout
-                                            android:orientation="horizontal"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:padding="10dp"
-                                            android:background="@drawable/white_rounded_corners" >
-
-                                            <ImageView
-                                                android:layout_width="25dp"
-                                                android:layout_height="25dp"
-                                                android:id="@+id/imageView8"
-                                                android:src="@drawable/email"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="15dp"
-                                                android:layout_height="match_parent"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:gravity="center_vertical" >
-
-                                                <EditText
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/reg_lname"
-                                                    android:background="#00000000"
-                                                    android:textColor="@color/text_black"
-                                                    android:hint="Last Name"
-                                                    android:textColorHint="@color/text_black"
-                                                    android:textSize="14sp"
-                                                    android:singleLine="true" />
-                                            </LinearLayout>
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:paddingLeft="5dp"
-                                            android:paddingRight="5dp" >
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="2dp"
-                                                android:background="@color/line_color" />
-                                        </LinearLayout>
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent" >
-
-                                        <LinearLayout
-                                            android:orientation="horizontal"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:padding="10dp"
-                                            android:background="@drawable/white_rounded_corners" >
-
-                                            <ImageView
-                                                android:layout_width="25dp"
-                                                android:layout_height="25dp"
-                                                android:id="@+id/imageView9"
-                                                android:src="@drawable/email"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="15dp"
-                                                android:layout_height="match_parent"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:gravity="center_vertical" >
-
-                                                <EditText
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/reg_uname"
-                                                    android:background="#00000000"
-                                                    android:textColor="@color/text_black"
-                                                    android:hint="User Name"
-                                                    android:textColorHint="@color/text_black"
-                                                    android:textSize="14sp"
-                                                    android:singleLine="true" />
-                                            </LinearLayout>
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:paddingLeft="5dp"
-                                            android:paddingRight="5dp" >
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="2dp"
-                                                android:background="@color/line_color" />
-                                        </LinearLayout>
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent" >
-
-                                        <LinearLayout
-                                            android:orientation="horizontal"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:padding="10dp"
-                                            android:background="@drawable/white_rounded_corners" >
-
-                                            <ImageView
-                                                android:layout_width="25dp"
-                                                android:layout_height="25dp"
-                                                android:id="@+id/imageView6"
-                                                android:src="@drawable/email"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="15dp"
-                                                android:layout_height="match_parent"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:gravity="center_vertical" >
-
-                                                <EditText
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/reg_pass"
-                                                    android:background="#00000000"
-                                                    android:textColor="@color/text_black"
-                                                    android:hint="Password"
-                                                    android:textColorHint="@color/text_black"
-                                                    android:textSize="14sp"
-                                                    android:singleLine="true"
-                                                    android:inputType="textPassword" />
-
-                                            </LinearLayout>
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:paddingLeft="5dp"
-                                            android:paddingRight="5dp" >
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="2dp"
-                                                android:background="@color/line_color" />
-                                        </LinearLayout>
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent">
-
-                                        <LinearLayout
-                                            android:orientation="horizontal"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:padding="10dp"
-                                            android:background="@drawable/white_rounded_corners">
-
-                                            <ImageView
-                                                android:layout_width="25dp"
-                                                android:layout_height="25dp"
-                                                android:id="@+id/imageView5"
-                                                android:src="@drawable/email"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="15dp"
-                                                android:layout_height="match_parent"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:gravity="center_vertical" >
-
-                                                <EditText
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:inputType="textEmailAddress"
-                                                    android:id="@+id/reg_email"
-                                                    android:background="#00000000"
-                                                    android:textColor="@color/text_black"
-                                                    android:hint="E-mail Address"
-                                                    android:textColorHint="@color/text_black"
-                                                    android:textSize="14sp"
-                                                    android:singleLine="true" />
-                                            </LinearLayout>
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:paddingLeft="5dp"
-                                            android:paddingRight="5dp" >
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="2dp"
-                                                android:background="@color/line_color" />
-                                        </LinearLayout>
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent" >
-
-                                        <LinearLayout
-                                            android:orientation="horizontal"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:padding="10dp"
-                                            android:background="@drawable/white_rounded_corners" >
-
-                                            <ImageView
-                                                android:layout_width="25dp"
-                                                android:layout_height="25dp"
-                                                android:id="@+id/imageView10"
-                                                android:src="@drawable/email"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="15dp"
-                                                android:layout_height="match_parent"
-                                                android:visibility="gone" />
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:gravity="center_vertical" >
-
-                                                <EditText
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/reg_phone"
-                                                    android:background="#00000000"
-                                                    android:textColor="@color/text_black"
-                                                    android:hint="Phone Number"
-                                                    android:textColorHint="@color/text_black"
-                                                    android:textSize="14sp"
-                                                    android:singleLine="true"
-                                                    android:inputType="phone" />
-
-                                            </LinearLayout>
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:paddingLeft="5dp"
-                                            android:paddingRight="5dp" >
-
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="2dp"
-                                                android:background="@color/line_color" />
-                                        </LinearLayout>
-                                    </LinearLayout>
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/login_rounded_corners"
-                                    android:id="@+id/register_ll"
-                                    android:gravity="center"
-                                    android:padding="3dp"
-                                    android:layout_marginTop="40dp" >
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Register"
-                                        android:id="@+id/register_tv"
-                                        android:textColor="#ffffff"
-                                        android:textSize="18sp"
-                                        android:layout_margin="10dp" />
+                                        android:layout_height="2dp"
+                                        android:background="@color/line_color" />
                                 </LinearLayout>
                             </LinearLayout>
-                        </ScrollView>
-                    </LinearLayout>
+                        </LinearLayout>
 
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginBottom="10dp" >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/login_rounded_corners"
+                                android:id="@+id/law_signup_submit_ll"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SUBMIT"
+                                    android:id="@+id/law_signup_submit_tv"
+                                    android:textSize="15sp"
+                                    android:textColor="#ffffff"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_marginBottom="7dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
 
-            </ViewFlipper>
-        </LinearLayout>
+            </LinearLayout>
+
+        </ViewFlipper>
 
         <LinearLayout
             android:orientation="vertical"
@@ -1037,14 +1276,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:layout_marginBottom="10dp" >
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
 
                     <LinearLayout
                         android:orientation="vertical"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/login_rounded_corners"
-                        android:id="@+id/fp_submit_ll" >
+                        android:id="@+id/fp_submit_ll"
+                        android:gravity="center">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -1062,147 +1304,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#88000000"
-            android:gravity="center"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
-            android:paddingRight="30dp"
-            android:paddingBottom="10dp"
-            android:id="@+id/signup_pop_law"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:background="@drawable/pink_rounded_corners1"
-                android:padding="10dp" >
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView10"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:id="@+id/signup_close"
-                        android:src="@drawable/close" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp" >
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="10dp"
-                            android:background="@drawable/white_rounded_corners" >
-
-                            <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:id="@+id/imageView36"
-                                android:src="@drawable/email"
-                                android:visibility="gone" />
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="15dp"
-                                android:layout_height="match_parent"
-                                android:visibility="gone" />
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center_vertical" >
-
-                                <EditText
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/law_signup_email"
-                                    android:background="#00000000"
-                                    android:textColor="@color/text_black"
-                                    android:hint="Enter Email id"
-                                    android:textColorHint="@color/text_black"
-                                    android:textSize="14sp"
-                                    android:singleLine="true"
-                                    android:inputType="textEmailAddress" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp" >
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:background="@color/line_color" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginBottom="10dp" >
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/login_rounded_corners"
-                        android:id="@+id/law_signup_submit_ll" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="SUBMIT"
-                            android:id="@+id/law_signup_submit_tv"
-                            android:textSize="15sp"
-                            android:textColor="#ffffff"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="7dp"
-                            android:layout_marginRight="30dp"
-                            android:layout_marginBottom="7dp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
     </RelativeLayout>
 
 </LinearLayout>

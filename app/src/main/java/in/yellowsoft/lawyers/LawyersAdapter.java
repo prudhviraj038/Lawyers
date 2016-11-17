@@ -63,7 +63,10 @@ public class LawyersAdapter extends BaseAdapter{
         // TODO Auto-generated method stub
         Holder holder=new Holder();
         View rowView;
-        rowView = inflater.inflate(R.layout.lawyers_item, null);
+        if (convertView == null)
+            rowView = inflater.inflate(R.layout.lawyers_item, null);
+        else
+            rowView = convertView;
         holder.law_name=(TextView) rowView.findViewById(R.id.law_name);
         holder.law_descri=(TextView) rowView.findViewById(R.id.law_descri);
         holder.review=(TextView) rowView.findViewById(R.id.law_reviws);
@@ -73,7 +76,7 @@ public class LawyersAdapter extends BaseAdapter{
 
         holder.law_name.setText(lawyers.get(position).name);
         holder.law_descri.setText(Html.fromHtml(lawyers.get(position).about));
-        holder.review.setText("Reviews ("+lawyers.get(position).reviews+")");
+        holder.review.setText(Settings.getword(context,"reviews")+" ("+lawyers.get(position).reviews+")");
 //        Log.e("image",lawyers.get(position).image);
         Picasso.with(context).load(lawyers.get(position).image).into(holder.img);
         return rowView;

@@ -17,14 +17,14 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:background="@color/menu_back"
                 android:gravity="center_vertical"
                 android:padding="5dp" >
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:id="@+id/books_back"
                     android:src="@drawable/back" />
 
@@ -118,31 +118,25 @@
 
                         <RelativeLayout
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/down_bar_dimension"
                             android:gravity="center"
-                            android:layout_weight="1" >
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/down_bar_dimension"
-                                android:background="#c69a32"
-                                android:layout_marginTop="20dp" />
+                            android:layout_weight="1"
+                            android:background="#c69a32">
 
                             <LinearLayout
                                 android:orientation="vertical"
-                                android:layout_width="@dimen/down_bar_dimension"
-                                android:layout_height="@dimen/down_bar_dimension"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
                                 android:layout_centerInParent="true"
-                                android:background="@drawable/circle_rounded_corners" />
+                                android:background="#c69a32" />
 
                             <ImageView
                                 android:layout_width="@dimen/img_dimension"
                                 android:layout_height="@dimen/img_dimension"
                                 android:id="@+id/books_image_3"
-                                android:src="@drawable/w_books"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="30dp" />
+                                android:src="@drawable/g_books"
+                                android:tint="#ffffff"
+                                android:layout_centerInParent="true" />
                         </RelativeLayout>
 
                         <RelativeLayout

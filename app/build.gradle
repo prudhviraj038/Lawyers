@@ -6,11 +6,13 @@ android {
 
     defaultConfig {
         applicationId "in.yellowsoft.lawyers"
-        minSdkVersion 15
-        targetSdkVersion 22
+        minSdkVersion 17
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled  true
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -18,14 +20,23 @@ android {
         }
     }
 }
-
+repositories {
+    jcenter()
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:24.0.0-alpha1'
-    compile 'com.google.android.gms:play-services:8.4.0'
+  //  compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
     compile files('libs/volley.jar')
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'com.koushikdutta.ion:ion:2.+'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.makeramen:roundedimageview:2.2.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.edmodo:cropper:1.0.1'
+    compile 'com.google.android.exoplayer:exoplayer:r2.0.4'
+
 }
+

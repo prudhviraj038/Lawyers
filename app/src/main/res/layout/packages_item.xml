@@ -17,11 +17,11 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:id="@+id/linearLayout"
                 android:paddingLeft="10dp"
-                android:paddingTop="20dp"
+                android:paddingTop="5dp"
                 android:paddingRight="10dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/linearLayout" >
+                android:gravity="center_vertical">
 
                 <RelativeLayout
                     android:layout_width="110dp"
@@ -40,18 +40,26 @@
                         android:text="BRONZE"
                         android:id="@+id/package_name"
                         android:layout_centerInParent="true"
-                        android:textColor="#79664a" />
+                        android:textColor="#000" />
                 </RelativeLayout>
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:gravity="center" >
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:id="@+id/pack_title_price_tv"
+                        android:textColor="#c69a32"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="3dp" />
 
                     <TextView
                         android:layout_width="wrap_content"

@@ -21,7 +21,7 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:background="@color/menu_back"
                 android:padding="5dp"
                 android:gravity="center_vertical" >
@@ -65,12 +65,12 @@
                         android:layout_marginBottom="20dp">
 
                         <RelativeLayout
-                            android:layout_width="140dp"
-                            android:layout_height="140dp">
+                            android:layout_width="120dp"
+                            android:layout_height="120dp">
 
                             <view
-                                android:layout_width="130dp"
-                                android:layout_height="130dp"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
                                 class="de.hdodenhof.circleimageview.CircleImageView"
                                 android:id="@+id/lawyer_image"
                                 android:layout_centerInParent="true"
@@ -335,7 +335,8 @@
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent" >
+                            android:layout_height="match_parent"
+                            android:id="@+id/pass_ll_law_signup">
 
                             <LinearLayout
                                 android:orientation="horizontal"
@@ -544,7 +545,7 @@
                                     android:layout_height="match_parent"
                                     android:gravity="center_vertical" >
 
-                                    <EditText
+                                    <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/law_signup_location"

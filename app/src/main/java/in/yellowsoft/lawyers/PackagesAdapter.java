@@ -51,7 +51,7 @@ public class PackagesAdapter extends BaseAdapter{
 
     public class Holder
     {
-        TextView pack_name,pack_description;
+        TextView pack_name,pack_description,name_price;
         CircleImageView img;
 
     }
@@ -62,8 +62,10 @@ public class PackagesAdapter extends BaseAdapter{
         View rowView;
         rowView = inflater.inflate(R.layout.packages_item, null);
         holder.pack_name=(TextView) rowView.findViewById(R.id.package_name);
+        holder.name_price=(TextView) rowView.findViewById(R.id.pack_title_price_tv);
         holder.pack_description=(TextView) rowView.findViewById(R.id.pack_description);
         holder.pack_name.setText(packages.get(position).getTitle(context));
+        holder.name_price.setText(packages.get(position).getTitle(context)+"  "+packages.get(position).price);
         holder.pack_description.setText(Html.fromHtml(packages.get(position).getDescription(context)));
 //        holder.img=(CircleImageView) rowView.findViewById(R.id.lawyer_img);
 //        Picasso.with(context).load(comments.get(position).mem_img).into(holder.img);

@@ -55,8 +55,8 @@ public class TimelineAdapter extends BaseAdapter{
     public class Holder
     {
         TextView head,description,time,date,read_tv;
-        LinearLayout read_ll;
-        ImageView share,timeline_img;
+        LinearLayout read_ll,ads_ll,tl_ll;
+        ImageView share,timeline_img,ply_btn,ads_img;
 
     }
     @Override
@@ -64,16 +64,44 @@ public class TimelineAdapter extends BaseAdapter{
         // TODO Auto-generated method stub
         Holder holder=new Holder();
         View rowView;
-        rowView = inflater.inflate(R.layout.timeline_item, null);
+        if (convertView == null)
+            rowView = inflater.inflate(R.layout.timeline_item, null);
+        else
+            rowView = convertView;
         holder.head=(TextView) rowView.findViewById(R.id.tim_lin_header);
         holder.description=(TextView) rowView.findViewById(R.id.time_line_des);
         holder.time=(TextView) rowView.findViewById(R.id.time_line_time);
         holder.date=(TextView) rowView.findViewById(R.id.time_line_date);
         holder.read_tv=(TextView) rowView.findViewById(R.id.read_more);
+        holder.read_tv.setText(Settings.getword(context,"Read More"));
         holder.read_ll=(LinearLayout) rowView.findViewById(R.id.read_more_ll);
+        holder.ads_ll=(LinearLayout) rowView.findViewById(R.id.ads_ll);
+        holder.tl_ll=(LinearLayout) rowView.findViewById(R.id.tl_item_ll);
         holder.share=(ImageView) rowView.findViewById(R.id.time_line_share);
+        holder.ads_img=(ImageView) rowView.findViewById(R.id.ads_img);
         holder.timeline_img=(ImageView) rowView.findViewById(R.id.time_line_img);
+        holder.ply_btn=(ImageView) rowView.findViewById(R.id.ply_btn_tl_list);
+        if(posts.get(position).id.equals("0")){
+            holder.tl_ll.setVisibility(View.GONE);
+            holder.ads_ll.setVisibility(View.VISIBLE);
+            Picasso.with(context).load(posts.get(position).image).into(holder.ads_img);
+
+        }else{
+            holder.tl_ll.setVisibility(View.VISIBLE);
+            holder.ads_ll.setVisibility(View.GONE);
+        }
+        if(posts.get(position).video.equals("")){
+            holder.ply_btn.setVisibility(View.GONE);
+        }else{
+            holder.ply_btn.setVisibility(View.VISIBLE);
+        }
         Picasso.with(context).load(posts.get(position).image).into(holder.timeline_img);
+        holder.ply_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timelineActivity.play_video(position);
+            }
+        });
 
         holder.head.setText(posts.get(position).title);
         holder.description.setText(posts.get(position).message);

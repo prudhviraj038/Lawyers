@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Lawyers implements Serializable {
     String id,name,email,phone,licenced,latitude,longitude,location,about,image,p_id,p_title,p_title_ar,rating,reviews,bg_image,
-    p_mes,p_go,p_tl,p_social;
+    p_mes,p_go,p_tl,p_social,status_sec,status_time;
     ArrayList<Area> area;
     ArrayList<Review> review;
     Lawyers(JSONObject jsonObject){
@@ -33,6 +33,8 @@ public class Lawyers implements Serializable {
             reviews=jsonObject.getString("reviews");
             image=jsonObject.getString("image");
             bg_image=jsonObject.getString("background_image");
+            status_time=jsonObject.getJSONObject("status").getString("time");
+            status_sec=jsonObject.getJSONObject("status").getString("seconds");
             p_id=jsonObject.getJSONObject("package").getString("id");
             p_title=jsonObject.getJSONObject("package").getString("title");
             p_title_ar=jsonObject.getJSONObject("package").getString("title_ar");

@@ -8,14 +8,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/white_rounded_corners"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:id="@+id/tl_item_ll"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="5dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -35,10 +39,12 @@
             </LinearLayout>
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:id="@+id/time_line_share"
-                android:src="@drawable/upload_icon" />
+                android:src="@drawable/upload_icon"
+                android:adjustViewBounds="false"
+                android:layout_marginBottom="5dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -62,25 +68,39 @@
             android:layout_width="match_parent"
             android:layout_height="170dp">
 
-            <FrameLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/time_line_img"
-                    android:src="@drawable/timeline_photo"
-                    android:scaleType="centerCrop"
-                    android:layout_margin="4dp" />
+                    android:layout_height="170dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/time_line_img"
+                        android:src="@drawable/timeline_photo"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView25"
+                        android:src="@drawable/home_rounded_corners1"
+                        android:scaleType="centerCrop" />
+                </FrameLayout>
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageView25"
-                    android:src="@drawable/home_rounded_corners1"
-                    android:scaleType="centerCrop" />
-            </FrameLayout>
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/ply_btn_tl_list"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/play_btn"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -143,5 +163,34 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ads_ll"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ads_img"
+                android:scaleType="centerCrop"
+                android:layout_margin="4dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView61"
+                android:src="@drawable/home_rounded_corners1"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
     </LinearLayout>
 </LinearLayout>
