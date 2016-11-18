@@ -82,7 +82,6 @@ public class TimelineActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Settings.forceRTLIfSupported(this);
-        Settings.forceRTLIfSupported(this);
         setContentView(R.layout.timeline_screen);
         posts=new ArrayList<>();
         type=Settings.getType(TimelineActivity.this);
@@ -329,7 +328,7 @@ public class TimelineActivity extends Activity {
         des_pop_ll.setVisibility(View.VISIBLE);
     }
     public  void play_video(int posi){
-        Intent intent = new Intent(TimelineActivity.this, VideoPlayerActivity.class);
+        Intent intent = new Intent(TimelineActivity.this, AndroidVideoPlayerActivity.class);
         Log.e("video",posts.get(posi).video);
         intent.putExtra("video", posts.get(posi).video);
         startActivity(intent);
